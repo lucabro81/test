@@ -3,5 +3,5 @@ In the `howMayRepetitions.ts` and `walkValidator.ts` files you will find the sol
 ## Run tests
 
 ```
-npx ts-node test.ts
+npx ts-node tests.ts
 ```
