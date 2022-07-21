@@ -5,7 +5,6 @@ import { walkValidator } from "./walkValidator";
 const testBuilder = new TestBuilder();
 
 testBuilder
-
 	.test(howManyRepetition)
 	.with(["a","b","c"])
 	.isEqualTo(0)
