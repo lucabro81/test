@@ -6,7 +6,7 @@ type DirectionType = "n" | "e" | "s" | "w";
  * @param directions
  * @param maxTravelTime
  */
-export const walkValidator = (directions: Array<DirectionType>, maxTravelTime = 10): boolean => {
+export const walkValidator = (directions: Array<DirectionType>, maxTravelTime: number = 10): boolean => {
 
 	// too much time
 	if (directions.length > maxTravelTime) {
@@ -23,8 +23,6 @@ export const walkValidator = (directions: Array<DirectionType>, maxTravelTime = 
 	}
 
 	// if the reduce function return 0 we've returned to the start safe and sound
-	return directions.reduce((acc: number, direction: DirectionType) => {
-		acc += directionMap[direction];
-		return acc;
-	}, 0) === 0
+	return directions.reduce((acc: number, direction: DirectionType) =>
+		acc + directionMap[direction], 0) === 0
 }
